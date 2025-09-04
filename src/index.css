@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/Satoshi-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SatoshiBold';
+  src: url('/font/Satoshi-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SatoshiLight';
+  src: url('/font/Satoshi-Light.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.bold {
+  font-family: 'SatoshiBold', sans-serif;
+}
+
+.light {
+  font-family: 'SatoshiLight', sans-serif;
+}
