@@ -20,6 +20,23 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Stylish';
+  src: url('/font/LavishlyYours-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+  color: #222222;
+}
+
+body, html {
+  scrollbar-width: none;
+}
+
+.stylish {
+  font-family: 'Stylish', sans-serif;
+}
 
 :root {
   font-family: 'Satoshi', sans-serif;

@@ -31,7 +31,7 @@ const Navbar = () => {
         gsap.set(navRef.current, { yPercent: -100, });
         gsap.set(linksRef.current, {
             autoAlpha: 0,
-            y: 24
+            x: -34
         });
         gsap.set(contactRef.current, {
             autoAlpha: 0,
@@ -51,7 +51,7 @@ const Navbar = () => {
             ease: "power3.inOut"
         }, "<").to(linksRef.current, {
             autoAlpha: 1,
-            y: 0,
+            x: 0,
             stagger: 0.1,
             duration: 0.5,
             ease: "power2.inOut"
