@@ -1,9 +1,6 @@
-import Git from "../assets/icons/git.svg";
-import Gsap from "../assets/icons/gsap.svg";
-import Html from "../assets/icons/html5.svg";
-import Tailwind from "../assets/icons/tailwindcss.svg";
-import React from "../assets/icons/react.svg";
-import Motion from "../assets/icons/moleculer.svg";
+import Vaonis from "../assets/Images/Vaonis.png";
+import Meltiee from "../assets/Images/Meltiee.png";
+
 
 export const navLinks = [
     {
@@ -46,25 +43,59 @@ export const socialMedias = [
 export const skillTiles = [
     {
         skill: "HTML",
-        icon: Html,
+        desc: "Structure & Architecture",
+        marq: "Crafting digital blueprints",
     },
     {
         skill: "Tailwind",
-        icon: Tailwind,
+        desc: "Design & Styling",
+        marq: "Styling at scale",
     },
     {
         skill: "React",
-        icon: React,
-    },{
+        desc: "Components & Interfaces",
+        marq: "Code meets interaction",
+    }, {
         skill: "GSAP",
-        icon: Gsap,
+        desc: "Animation & Motion",
+        marq: "Motion crafted to perfection",
     },
     {
         skill: "Motion Graphics",
-        icon: Motion,
+        desc: "Graphics & Visuals",
+        marq: "Pixels that move",
     },
     {
         skill: "Git",
-        icon: Git,
+        desc: "Collaboration",
+        marq: "Collaboration without chaos",
     },
 ];
+
+export const titles = [
+    {
+        title: "Skills",
+        text: "Not just technologies, but the ingredients of creativity, speed, and precision."
+    },
+    {
+        title: "Projects",
+        text: "Where ideas transform into crafted experiences."
+    },
+];
+
+export const projectItems = [
+    {
+        title: "Vaonis",
+        tech: ["html", "tailwind", "gsap"],
+        img: Vaonis,
+        desc: "An immersive showcase for Vaonis telescopes, blending design, motion, and astronomy.",
+        about: ""
+    },
+    {
+        title: "Meltiee",
+        tech: ["html", "tailwind", "gsap"],
+        img: Meltiee,
+        desc: "An interactive journey through Meltiee bakery, where design meets confectionery charm.",
+        about: ""
+    },
+]

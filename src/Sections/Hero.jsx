@@ -14,7 +14,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="main-title absolute left-[50%] md:left-[47%] -translate-x-[50%] top-[9%] md:top-[20%]">
-                    <h1 className='stylish text-6xl min-[376px]:text-[75px] text-[#222222] '>Saksham</h1>
+                    <h1 className='stylish text-6xl min-[376px]:text-[90px] text-[#222222] '>Saksham</h1>
                 </div>
                 <div className="overlay absolute top-0 md:bottom-0 flex w-[100vw] md:w-[50vw] px-4 md:px-10">
                     <HeroLeftText />
