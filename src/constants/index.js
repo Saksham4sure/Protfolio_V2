@@ -1,22 +1,24 @@
 import Vaonis from "../assets/Images/Vaonis.png";
 import Meltiee from "../assets/Images/Meltiee.png";
 
+import { FaHtml5 } from "react-icons/fa";
+
 
 export const navLinks = [
     {
-        id: "home",
+        id: "Home",
         href: "home"
     },
     {
-        id: "skills",
+        id: "Skills",
         href: "skills"
     },
     {
-        id: "projects",
+        id: "Projects",
         href: "projects"
     },
     {
-        id: "contact",
+        id: "Contact",
         href: "contact"
     },
 ];
@@ -44,31 +46,32 @@ export const skillTiles = [
     {
         skill: "HTML",
         desc: "Structure & Architecture",
-        marq: "Crafting digital blueprints",
+        marq: "-Crafting digital blueprints",
     },
     {
         skill: "Tailwind",
         desc: "Design & Styling",
-        marq: "Styling at scale",
+        marq: "-Styling at scale",
     },
     {
         skill: "React",
         desc: "Components & Interfaces",
-        marq: "Code meets interaction",
-    }, {
+        marq: "-Code meets interaction",
+    }, 
+    {
         skill: "GSAP",
         desc: "Animation & Motion",
-        marq: "Motion crafted to perfection",
+        marq: "-Motion crafted to perfection",
     },
     {
         skill: "Motion Graphics",
         desc: "Graphics & Visuals",
-        marq: "Pixels that move",
+        marq: "-Pixels that move",
     },
     {
         skill: "Git",
         desc: "Collaboration",
-        marq: "Collaboration without chaos",
+        marq: "-Collaboration without chaos",
     },
 ];
 
@@ -81,12 +84,16 @@ export const titles = [
         title: "Projects",
         text: "Where ideas transform into crafted experiences."
     },
+    {
+        title: "Contact",
+        text: "Let’s create something meaningful together."
+    }
 ];
 
 export const projectItems = [
     {
         title: "Vaonis",
-        tech: ["html", "tailwind", "gsap"],
+        tech: ["html", "tailwind", "lenis"],
         img: Vaonis,
         desc: "An immersive showcase for Vaonis telescopes, blending design, motion, and astronomy.",
         about: ""
@@ -98,4 +105,7 @@ export const projectItems = [
         desc: "An interactive journey through Meltiee bakery, where design meets confectionery charm.",
         about: ""
     },
-]
+];
+
+export const aboutPara1 = "Hi I'm Saksham Shrestha, a passionate frontend developer with a focus on building fast, minimal, and visually appealing web applications.";
+export const aboutPara2 = "I'm continuously learning and experimenting with modern tools like React, Tailwind, and motion libraries.";

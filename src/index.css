@@ -49,3 +49,20 @@ body, html {
 .light {
   font-family: 'SatoshiLight', sans-serif;
 }
+
+
+.moveX{
+  animation: marqAnimation;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes marqAnimation {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}

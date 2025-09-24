@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
-function Skill({ skill, desc }) {
+function Skill({ skill, desc, marq }) {
   const skillRef = useRef(null);
   const descRef = useRef(null);
   const bgRef = useRef(null);
@@ -12,17 +12,17 @@ function Skill({ skill, desc }) {
     tl.current = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } })
       .to(skillRef.current, {
         x: -20,
-        color: "#2C2C2C",
+        color: "#222222",
         duration: 0.6,
       })
       .to(descRef.current, {
         x: 20,
-        color: "#2C2C2C",
+        color: "#222222",
         duration: 0.6,
       }, "<")
 
       .fromTo(bgRef.current,
-        { clipPath: "inset(0% 0% 100% 0%)" }, 
+        { clipPath: "inset(50% 0% 50% 0%)" }, 
         { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "expo.inOut" }, 
         "<"
       );
@@ -42,9 +42,18 @@ function Skill({ skill, desc }) {
       >
         <div
           ref={bgRef}
-          className="absolute inset-0 bg-[#a3a3a3] origin-left"
+          className="absolute inset-0 z-10 flex items-center bg-[#FFFFFF] text-[#222222] uppercase origin-left cursor-default"
           style={{ clipPath: "inset(100% 0% 0% 0%)" }}
-        ></div>
+        >
+          <div className="flex moveX">
+            <h1 className="text-[15vh] md:text-[20vh] whitespace-nowrap leading-0">{marq}</h1>
+            <h1 className="text-[15vh] md:text-[20vh] whitespace-nowrap leading-0">{marq}</h1>
+          </div>
+          <div className="flex moveX">
+            <h1 className="text-[15vh] md:text-[20vh] whitespace-nowrap leading-0">{marq}</h1>
+            <h1 className="text-[15vh] md:text-[20vh] whitespace-nowrap leading-0">{marq}</h1>
+          </div>
+        </div>
 
         <div className="w-full flex items-center px-10 md:px-32 pointer-events-none">
           <div ref={skillRef} className="w-3/4 md:w-4/5 md:pl-10">

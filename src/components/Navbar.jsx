@@ -53,9 +53,9 @@ const Navbar = () => {
             autoAlpha: 1,
             x: 0,
             stagger: 0.1,
-            duration: 0.5,
-            ease: "power2.inOut"
-        }, "<+0.7").to(contactRef.current, {
+            duration: 0.8,
+            ease: "power3.out"
+        }, "<+0.8").to(contactRef.current, {
             autoAlpha: 1,
             y: 0,
             duration: 0.5,
@@ -98,13 +98,13 @@ const Navbar = () => {
                         <div ref={bottomLine} className='bg-black w-[28px] h-[2px]'></div>
                     </div>
                     <div className='hidden md:flex'>
-                        <h1 ref={butnRef} className=''>Let's talk</h1>
+                        <a href='#contact' ref={butnRef} className=''>Let's talk</a>
                     </div>
                 </div>
             </div>
 
             <div ref={navRef} className="fullScreenNav bg-[#1D1D1D] text-[#D9D9D9] fixed h-[100vh] w-[100vw] z-40 pl-4">
-                <div className='flex flex-col text-5xl absolute top-28 md:top-24 md:text-6xl light gap-y-2 uppercase'>
+                <div className='flex flex-col text-5xl absolute top-28 md:top-24 md:text-7xl light gap-y-2 uppercase'>
                     {navLinks.map((navLinks, index) => (
                         <div className='overflow-hidden' key={index} ref={(el) => (linksRef.current[index] = el)}>
                             <Link to={`${navLinks.href}`} className=' cursor-pointer' smooth offset={0} duration={500} onClick={toggleMenu}>{navLinks.id}</Link>
