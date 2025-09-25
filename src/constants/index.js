@@ -23,6 +23,25 @@ export const navLinks = [
     },
 ];
 
+export const contactLinks = [
+    {
+        id: "Home",
+        href: "home"
+    },
+    {
+        id: "Skills",
+        href: "skills"
+    },
+    {
+        id: "Projects",
+        href: "projects"
+    },
+    {
+        id: "-",
+        href: "contact"
+    },
+];
+
 export const socialMedias = [
     {
         name: "Instagram",

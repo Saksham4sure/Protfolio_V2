@@ -1,4 +1,5 @@
 import './App.css'
+import Preloader from './components/AnimationComponents/Preloader'
 import Navbar from './components/Navbar'
 import About from './Sections/About'
 import Contact from './Sections/Contact'

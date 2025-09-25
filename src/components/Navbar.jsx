@@ -15,6 +15,7 @@ const Navbar = () => {
     const logoRef = useRef(null);
     const butnRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
+    const navbar = useRef(null);
 
     useEffect(() => {
         if (isOpen) {
@@ -28,6 +29,13 @@ const Navbar = () => {
     }, [isOpen]);
 
     useGSAP(() => {
+        gsap.from(navbar.current, {
+            y: -100,
+            delay: 1.5,
+            duration: 1,
+            ease: "power3.out",
+        });
+
         gsap.set(navRef.current, { yPercent: -100, });
         gsap.set(linksRef.current, {
             autoAlpha: 0,
@@ -88,7 +96,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='flex w-full justify-between items-center px-10 py-4 fixed z-50'>
+            <div ref={navbar} className='flex w-full justify-between items-center px-10 py-4 fixed z-50'>
                 <div className="logo z-30 ">
                     <h1 ref={logoRef} className="text-5xl flex items-end">S<span className='text-xl'>x</span></h1>
                 </div>

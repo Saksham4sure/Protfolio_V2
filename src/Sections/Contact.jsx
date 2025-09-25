@@ -1,4 +1,4 @@
-import { navLinks, socialMedias, titles } from "../constants";
+import { contactLinks, socialMedias, titles } from "../constants";
 import Titles from "../components/Titles";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ const Contact = () => {
             <div className="flex gap-10 md:gap-20 md:w-1/2 items-center justify-center">
               <div className="flex flex-col ">
                 <p className="text-white/50 text-xl">Go to</p>
-                {navLinks.map((navLinks, index) => (
+                {contactLinks.map((navLinks, index) => (
                   <Link
                     className="tracking-wide text-3xl light cursor-pointer"
                     key={index}
