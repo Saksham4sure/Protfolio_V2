@@ -15,7 +15,7 @@ const SplitChar = ({children, className='', delay}) => {
                 y: 100,
                 duration: 1,
                 ease: "power3.out",
-                stagger: 0.05,
+                stagger: 0.1,
                 delay: delay,
             })
         }

@@ -50,6 +50,9 @@ body, html {
   font-family: 'SatoshiLight', sans-serif;
 }
 
+.animated-text {
+  will-change: transform;
+}
 
 .moveX{
   animation: marqAnimation;

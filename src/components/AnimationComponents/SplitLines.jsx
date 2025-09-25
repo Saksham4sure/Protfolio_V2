@@ -15,7 +15,7 @@ const SplitLines = ({ children, className = "", delay }) => {
       gsap.from(split.lines, {
         y: 100,
         duration: 1,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: "power3.out",
         delay: delay,
       });
