@@ -45,19 +45,19 @@ export const contactLinks = [
 export const socialMedias = [
     {
         name: "Instagram",
-        href: "instagram.com"
+        href: "https://www.instagram.com/aintwiz/"
     },
     {
         name: "Facebook",
-        href: "instagram.com"
+        href: "https://www.facebook.com/sakshamizhero"
     },
     {
         name: "LinkedIn",
-        href: "instagram.com"
+        href: "https://www.linkedin.com/in/sakshamjsdev/"
     },
     {
         name: "Github",
-        href: "instagram.com"
+        href: "https://github.com/Saksham4sure"
     }
 ];
 
@@ -115,14 +115,16 @@ export const projectItems = [
         tech: ["html", "tailwind", "lenis"],
         img: Vaonis,
         desc: "An immersive showcase for Vaonis telescopes, blending design, motion, and astronomy.",
-        about: ""
+        about: "",
+        link: "http://vaonis.vercel.app/",
     },
     {
         title: "Meltiee",
         tech: ["html", "tailwind", "gsap"],
         img: Meltiee,
         desc: "An interactive journey through Meltiee bakery, where design meets confectionery charm.",
-        about: ""
+        about: "",
+        link: "https://meltiee.vercel.app/",
     },
 ];
 

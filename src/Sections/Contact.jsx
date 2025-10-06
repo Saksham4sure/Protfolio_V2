@@ -27,7 +27,8 @@ const Contact = () => {
                     className="tracking-wide text-3xl light cursor-pointer"
                     key={index}
                     to={navLinks.href}
-                    smooth offset={0} duration={2000} 
+                    smooth offset={0} 
+                    duration={2000} 
                   >
                     {navLinks.id}
                   </Link>
@@ -41,6 +42,7 @@ const Contact = () => {
                       className="tracking-wide text-3xl light"
                       key={index}
                       href={socials.href}
+                      target="_blank" rel="noopener noreferrer"
                     >
                       {socials.name}
                     </a>

@@ -32,6 +32,7 @@ const Projects = () => {
               img={proj.img}
               descri={proj.desc}
               techno={proj.tech}
+              link={proj.link}
             />
           ))}
           <div className="bg-stone-900 h-[1px] rounded-full w-full"></div>

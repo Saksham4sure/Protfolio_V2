@@ -128,7 +128,7 @@ const Navbar = () => {
                         <p className='text-white/50'>Socials</p>
                         <div className='flex flex-col flex-wrap md:flex-row gap-x-2'>
                             {socialMedias.map((socials, index) => (
-                                <a className='text-sm tracking-wide' key={index} href={socials.href}>{socials.name}</a>
+                                <a className='text-sm tracking-wide' key={index} href={socials.href} target="_blank" rel="noopener noreferrer">{socials.name}</a>
                             ))}
                         </div>
                     </div>

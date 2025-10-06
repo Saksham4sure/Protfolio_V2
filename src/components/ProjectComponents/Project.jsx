@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 
-function Project({ title, img, descri, techno }) {
+function Project({ title, img, descri, techno, link }) {
   const tl = useRef(null);
   const imgRef = useRef(null);
   const projRef = useRef(null);
@@ -35,8 +35,12 @@ function Project({ title, img, descri, techno }) {
   const enter = () => tl.current.play();
   const leave = () => tl.current.reverse();
 
+  const linkOpen = () => {
+    window.open(link, "_blank")
+  }
+
   return (
-    <div className="">
+    <div onClick={linkOpen} className="">
       <div className="bg-stone-900 h-[1px] rounded-full w-full"></div>
       <div ref={projRef} className="flex flex-col md:flex-row py-5 px-2" onMouseEnter={enter} onMouseLeave={leave}>
         <div className="md:w-1/6 flex justify-between">
