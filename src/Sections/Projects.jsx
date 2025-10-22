@@ -38,7 +38,7 @@ const Projects = () => {
           <div className="bg-stone-900 h-[1px] rounded-full w-full"></div>
         </div>
         <motion.div style={{height}} className="relative mt-[10px]">
-          <div className="absolute h-[700%] w-[120%] bg-[#FFFFFF] left-[-10%] rounded-b-[50%] "></div>
+          <div className="absolute h-[700%] w-[120%] bg-[#FFFFFF] left-[-10%] rounded-b-[50%] shadow-lg shadow-[#555555]"></div>
         </motion.div>
       </div>
     </>

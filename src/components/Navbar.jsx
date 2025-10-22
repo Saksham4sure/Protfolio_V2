@@ -31,7 +31,7 @@ const Navbar = () => {
     useGSAP(() => {
         gsap.from(navbar.current, {
             y: -100,
-            delay: 1.5,
+            delay: 1,
             duration: 1,
             ease: "power3.out",
         });
@@ -51,19 +51,19 @@ const Navbar = () => {
 
         tl.current = gsap.timeline({ paused: true }).to(navRef.current, {
             yPercent: 0,
-            duration: 1,
+            duration: 0.5,
             ease: "power3.inOut"
         }).to([logoRef.current, butnRef.current], {
             color: "#D9D9D9",
-            duration: 1,
+            duration: 0.5,
             ease: "power3.inOut"
         }, "<").to(linksRef.current, {
             autoAlpha: 1,
             x: 0,
-            stagger: 0.1,
-            duration: 0.8,
+            stagger: 0.05,
+            duration: 0.4,
             ease: "power3.out"
-        }, "<+0.8").to(contactRef.current, {
+        }, "<+0.4").to(contactRef.current, {
             autoAlpha: 1,
             y: 0,
             duration: 0.5,
@@ -111,8 +111,8 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div ref={navRef} className="fullScreenNav bg-[#1D1D1D] text-[#D9D9D9] fixed h-[100vh] w-[100vw] z-40 pl-4">
-                <div className='flex flex-col text-5xl absolute top-28 md:top-24 md:text-7xl light gap-y-2 uppercase'>
+            <div ref={navRef} className="fullScreenNav bg-[#1D1D1D] text-[#D9D9D9] fixed h-[100vh] w-[100vw] z-40 pl-6">
+                <div className='flex flex-col text-5xl absolute top-40 md:top-32 md:text-6xl light gap-y-2'>
                     {navLinks.map((navLinks, index) => (
                         <div className='overflow-hidden' key={index} ref={(el) => (linksRef.current[index] = el)}>
                             <Link to={`${navLinks.href}`} className=' cursor-pointer' smooth offset={0} duration={500} onClick={toggleMenu}>{navLinks.id}</Link>

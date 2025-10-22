@@ -25,9 +25,9 @@ const HeroLeftText = () => {
                 <SplitWords delay={0.7} className='text-xl min-[376px]:text-3xl w-[100vw] light animated-text'>—still figuring it out.</SplitWords>
                 <div ref={line} className='bg-[#222222] w-[260px] h-[1px] absolute top-[120px] rounded-full origin-left animated-text'></div>
             </div>
-            <div className="bottom-text absolute bottom-[58%] min-[376px]:bottom-[54%] md:bottom-[4%]">
-                <SplitWords delay={0.7} className='text-lg animated-text'><span>&rarr;</span> Get in touch</SplitWords>
-            </div>
+            <a href="/my-resume.pdf" target="_blank" className="bottom-text absolute bottom-[58%] min-[376px]:bottom-[54%] md:bottom-[4%]">
+                <SplitWords delay={0.7} className='text-lg animated-text'>View resume</SplitWords>
+            </a>
         </div>
     )
 }
