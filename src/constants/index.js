@@ -1,5 +1,6 @@
 import Vaonis from "../assets/Images/Vaonis.png";
 import Meltiee from "../assets/Images/Meltiee.png";
+import Rentora from "../assets/Images/Rentora.png";
 
 import { FaHtml5 } from "react-icons/fa";
 
@@ -76,7 +77,7 @@ export const skillTiles = [
         skill: "React",
         desc: "Components & Interfaces",
         marq: "-Code meets interaction",
-    }, 
+    },
     {
         skill: "GSAP",
         desc: "Animation & Motion",
@@ -105,7 +106,7 @@ export const titles = [
     },
     {
         title: "Contact",
-        text: "Let’s create something meaningful together."
+        text: "Let's create something meaningful together."
     }
 ];
 
@@ -125,6 +126,14 @@ export const projectItems = [
         desc: "An interactive journey through Meltiee bakery, where design meets confectionery charm.",
         about: "",
         link: "https://meltiee.vercel.app/",
+    },
+    {
+        title: "Rentora",
+        tech: ["react", "tailwind"],
+        img: Rentora,
+        desc: "Rentora is a simple booking platform for resort apartments, making reservations easy and hassle-free.",
+        about: "",
+        link: "http://rentoraa.vercel.app/",
     },
 ];
 

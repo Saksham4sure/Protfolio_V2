@@ -1,84 +1,33 @@
-import { useGSAP } from "@gsap/react";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import { useRef } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { FiMaximize } from "react-icons/fi";
+
 
 
 function Project({ title, img, descri, techno, link }) {
-  const tl = useRef(null);
-  const imgRef = useRef(null);
-  const projRef = useRef(null);
-  const til1 = useRef(null);
-  const til2 = useRef(null);
-
-  useGSAP( () => {
-
-    tl.current = gsap.timeline({paused: true})
-    .to(imgRef.current, {
-      scale: 1.05,
-      duration: 0.5,
-      ease: "power3.out"
-    })
-    .to(til1.current, {
-      y: -30,
-      duration: 0.5,
-      ease: "power3.out"
-    }, "<")
-    .to(til2.current, {
-      y: -30,
-      duration: 0.5,
-      ease: "power3.out"
-    }, "<")
-  });
-
-  const enter = () => tl.current.play();
-  const leave = () => tl.current.reverse();
-
-  const linkOpen = () => {
-    window.open(link, "_blank")
-  }
 
   return (
-    <div onClick={linkOpen} className="">
-      <div className="bg-stone-900 h-[1px] rounded-full w-full"></div>
-      <div ref={projRef} className="flex flex-col md:flex-row py-5 px-2" onMouseEnter={enter} onMouseLeave={leave}>
-        <div className="md:w-1/6 flex justify-between">
-        <div className="h-[30px] overflow-hidden">
-          <h1 ref={til1} className="bold text-xl">-{title}</h1>
-          <h1 ref={til2} className="bold text-xl">-{title}</h1>
-        </div>
-          <MdArrowOutward className="text-2xl flex md:hidden" />
-        </div>
-        <div className="md:w-2/6 h-full py-4 md:py-0 overflow-hidden">
-          <img
-            ref={imgRef}
-            className="object-cover h-full"
-            src={img}
-            alt={title}
-          />
-        </div>
-        <div className="flex flex-col md:w-3/6 md:px-10">
-          <div className="flex items-center gap-2 text-sm ">
-            {techno.map((tech) => (
-              <p
-                className="border rounded-2xl px-3 flex items-center text-center justify-center light"
-                key={tech}
-              >
-                {tech}
-              </p>
+    <Link to={link} target="_blank">
+      <div className="border border-[#cccccc] w-[320px] md:w-[400px] h-[240px] md:h-[300px] px-4 pt-3 bg-[#eeeeee] rounded-2xl gap-4 flex flex-col overflow-hidden">
+        <div className="flex justify-between items-center cursor-default">
+          <div className="flex px-2 py-1 rounded-2xl text-xs capitalize text-[#666666] gap-1 bg-[#cccccc]">
+            {techno.map((techno) => (
+              <p className="border px-2 rounded-2xl border-[#bebebe]">{techno}</p>
             ))}
           </div>
-          <div className="text-xl md:text-2xl leading-6 md:leading-7 py-3">
-            {descri}
-          </div>
-          <div className=" border border-stone-200 rounded-2xl bg-[#222222] text-[#FFFFFF] w-[90px] flex items-center justify-center cursor-pointer">
-            <p className="light flex items-center gap-2">Discover </p>
-          </div>
+          <Link to={link}>
+            <FiMaximize />
+          </Link>
         </div>
-        <MdArrowOutward className="text-2xl hidden md:flex" />
+        <div className="flex flex-col gap-1">
+          <h1 className="text-xl text-[#222222] bold">{title}</h1>
+          <p className="text-sm text-[#666666]">{descri}</p>
+        </div>
+        <div className="w-full rounded-2xl">
+          <img className="w-full object-cover rounded-xl" src={img} alt={title} />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

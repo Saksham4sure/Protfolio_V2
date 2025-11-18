@@ -112,7 +112,7 @@ const Navbar = () => {
             </div>
 
             <div ref={navRef} className="fullScreenNav bg-[#1D1D1D] text-[#D9D9D9] fixed h-[100vh] w-[100vw] z-40 pl-6">
-                <div className='flex flex-col text-5xl absolute top-40 md:top-32 md:text-6xl light gap-y-2'>
+                <div className='flex flex-col text-5xl absolute top-32 md:text-6xl light gap-y-2'>
                     {navLinks.map((navLinks, index) => (
                         <div className='overflow-hidden' key={index} ref={(el) => (linksRef.current[index] = el)}>
                             <Link to={`${navLinks.href}`} className=' cursor-pointer' smooth offset={0} duration={500} onClick={toggleMenu}>{navLinks.id}</Link>
@@ -123,6 +123,10 @@ const Navbar = () => {
                     <div className='light'>
                         <p className='text-white/50'>E-mail</p>
                         <p className='tracking-wide lowercase text-sm'>sakshamorig123@gmail.com</p>
+                    </div>
+                    <div className='light'>
+                        <p className='text-white/50'>Phone</p>
+                        <p className='tracking-wide lowercase text-sm'>+977-9767571599</p>
                     </div>
                     <div className='light'>
                         <p className='text-white/50'>Socials</p>

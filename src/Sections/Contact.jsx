@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 
 const Contact = () => {
-    
+
 
   return (
     <>
-      <motion.div id='contact'  className="py-10 bg-[#222222] text-[#ffffff] h-[100vh] ">
+      <motion.div id='contact' className="py-10 bg-[#222222] text-[#ffffff] md:h-[100vh] ">
         <div className="pt-20">
           <Titles title={titles[2].title} text={titles[2].text} />
         </div>
@@ -27,8 +27,8 @@ const Contact = () => {
                     className="tracking-wide text-3xl light cursor-pointer"
                     key={index}
                     to={navLinks.href}
-                    smooth offset={0} 
-                    duration={2000} 
+                    smooth offset={0}
+                    duration={2000}
                   >
                     {navLinks.id}
                   </Link>
@@ -50,11 +50,17 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 gap-5 flex flex-col">
               <div>
                 <p className="text-xl text-white/50">G-mail</p>
                 <p className="text-2xl tracking-wide light">
                   sakshamorig123@gmail.com
+                </p>
+              </div>
+              <div>
+                <p className="text-xl text-white/50">Phone</p>
+                <p className="text-2xl tracking-wide light">
+                  +977-9767571599
                 </p>
               </div>
             </div>
