@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Skills from "../components/SkillComponents/Skills";
 import Titles from "../components/Titles";
 import { aboutPara1, aboutPara2, skillTiles, titles } from "../constants";

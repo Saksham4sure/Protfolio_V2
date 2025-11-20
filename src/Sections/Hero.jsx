@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="main-title absolute left-[50%] -translate-x-[50%] top-[9%] md:top-[20%] z-30 flex items-center justify-center">
-          <SplitChar className="stylish text-5xl min-[376px]:text-[55px] text-[#222222] animated-text">
+          <SplitChar className="stylish text-5xl 2xl:text-8xl min-[376px]:text-[55px] text-[#222222] animated-text">
             Saksham
           </SplitChar>
         </div>
