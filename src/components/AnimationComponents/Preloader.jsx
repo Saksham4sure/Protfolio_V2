@@ -58,11 +58,11 @@ export default function Preloader({ setLoading }) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-[#252525] h-[100vh] w-[100vw] flex items-center justify-center z-[9999]"
+      className="fixed bg-[#252525] h-[100vh] w-[100vw] flex items-center justify-center z-[9999]"
     >
       <p
         ref={textRef}
-        className="text-white text-5xl font-light tracking-wide"
+        className="text-white text-5xl font-light tracking-wide flex items-center justify-center w-full h-full"
       >
         • Hello
       </p>
