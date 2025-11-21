@@ -97,7 +97,7 @@ const Navbar = () => {
     return (
         <>
             <div ref={navbar} className='flex w-full justify-between items-center px-10 py-4 fixed z-50'>
-                <div className="logo z-30 ">
+                <div className="logo z-30">
                     <h1 ref={logoRef} className="text-5xl flex items-end">S<span className='text-xl'>x</span></h1>
                 </div>
                 <div className="menu flex items-center justify-center gap-6 h-full">
