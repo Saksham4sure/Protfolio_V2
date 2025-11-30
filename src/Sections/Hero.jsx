@@ -68,8 +68,8 @@ const Hero = () => {
               </div>
               <img
                 className="xl:absolute xl:-top-32 object-cover md:h-[100vh] w-full lg:h-auto"
-                src="/Image.jpg"
-                alt=""
+                src="/saksham.jpg"
+                alt="Saksham Shrestha"
               />
             </div>
           </div>
