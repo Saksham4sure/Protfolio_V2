@@ -20,17 +20,20 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stylish';
   src: url('/font/LavishlyYours-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-:root{
+
+:root {
   color: #222222;
 }
 
-body, html {
+body,
+html {
   scrollbar-width: none;
 }
 
@@ -54,7 +57,7 @@ body, html {
   will-change: auto;
 }
 
-.moveX{
+.moveX {
   animation: marqAnimation;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -62,10 +65,15 @@ body, html {
 }
 
 @keyframes marqAnimation {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+
+  to {
     transform: translateX(-50%);
   }
+}
+
+.clippy {
+  clip-path: polygon(0 1%, 100% 0, 100% 100%, 20% 100%);
 }

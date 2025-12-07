@@ -107,6 +107,7 @@ const About = () => {
                 marq={skill.marq}
               />
             ))}
+
           </div>
           <div className="bg-stone-500 h-[1px] w-[80vw] rounded-full"></div>
         </div>
