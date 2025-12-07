@@ -2,7 +2,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
-function Project({ title, img, descri, techno, link, index }) {
+function Project({ title, img, descri, techno, link }) {
 
   return (
 
@@ -16,7 +16,7 @@ function Project({ title, img, descri, techno, link, index }) {
         </div>
       </div>
       <div className="w-full h-[80%] overflow-hidden rounded-2xl border border-[#cccccc]">
-        <img className="w-full h-full object-cover" src={img} alt="" />
+        <img className="w-full h-full object-cover" src={img} alt={title} />
       </div>
     </Link>
 

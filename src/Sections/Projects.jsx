@@ -28,7 +28,6 @@ const Projects = () => {
           {projectItems.map((proj,index) => (
             <Project
               key={index}
-              index={index}
               title={proj.title}
               img={proj.img}
               descri={proj.desc}
@@ -40,7 +39,7 @@ const Projects = () => {
           <div className="bg-stone-900 h-[1px] rounded-full w-full"></div>
         </div>
 
-        <motion.div style={{ height }} className="relative mt-[10px]">
+        <motion.div style={{ height }} className="relative mt-2.5">
           <div className="absolute h-[700%] w-[120%] bg-[#FFFFFF] left-[-10%] rounded-b-[50%] shadow-lg shadow-[#555555]"></div>
         </motion.div>
 
