@@ -16,7 +16,7 @@ function Project({ title, img, descri, techno, link }) {
         </div>
       </div>
       <div className="w-full h-[80%] overflow-hidden rounded-2xl border border-[#cccccc]">
-        <img className="w-full h-full object-cover" src={img} alt={title} />
+        <img className="w-full h-full object-cover scale-103" src={img} alt={title} />
       </div>
     </Link>
 

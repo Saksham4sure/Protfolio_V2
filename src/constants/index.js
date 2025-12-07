@@ -1,6 +1,7 @@
-import Vaonis from "../assets/Images/Vaonis.png";
-import Meltiee from "../assets/Images/Meltiee.png";
-import Rentora from "../assets/Images/Rentora.png";
+import Vaonis from "../assets/Images/vaonis.png";
+import Meltiee from "../assets/Images/meltiee.png";
+import Rentora from "../assets/Images/rentora.png";
+import Krypo from "../assets/Images/krypo.png";
 
 import { FaHtml5 } from "react-icons/fa";
 
@@ -111,6 +112,14 @@ export const titles = [
 ];
 
 export const projectItems = [
+    {
+        title: "KryPo.",
+        tech: ["react", "tailwind"],
+        img: Krypo,
+        desc: "Rentora is a simple booking platform for resort apartments, making reservations easy and hassle-free.",
+        about: "",
+        link: "http://rentoraa.vercel.app/",
+    },
     {
         title: "Vaonis",
         tech: ["html", "tailwind", "lenis"],
