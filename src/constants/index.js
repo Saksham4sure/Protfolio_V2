@@ -118,7 +118,7 @@ export const projectItems = [
         img: Krypo,
         desc: "Rentora is a simple booking platform for resort apartments, making reservations easy and hassle-free.",
         about: "",
-        link: "http://rentoraa.vercel.app/",
+        link: "http://krypo.vercel.app/",
     },
     {
         title: "Vaonis",
