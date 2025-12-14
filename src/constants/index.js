@@ -116,10 +116,10 @@ export const projectItems = [
     {
         title: "Velaro",
         tech: ["react", "tailwind"],
-        img: Krypo,
+        img: Velaro,
         desc: "Rentora is a simple booking platform for resort apartments, making reservations easy and hassle-free.",
         about: "",
-        link: "http://krypo.vercel.app/",
+        link: "http://velaro-cars.vercel.app/",
     },
     {
         title: "KryPo.",
