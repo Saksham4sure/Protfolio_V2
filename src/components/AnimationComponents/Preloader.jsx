@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useState } from "react";
 
 const words = [
   "• Namaste",
@@ -12,48 +13,46 @@ const words = [
   "• नमस्कार",
 ];
 
-export default function Preloader({ setLoading }) {
+export default function Preloader({ ready, setLoading }) {
   const textRef = useRef();
   const containerRef = useRef();
+  const [animationDone, setAnimationDone] = useState(false);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      onComplete: () => setAnimationDone(true),
+    });
 
-    tl.fromTo(textRef.current, {
-      opacity: 0,
-      y: 100,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      ease: "power3.out"
-    }
-  )
+    tl.fromTo(
+      textRef.current,
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }
+    );
 
     words.forEach((word) => {
-
       tl.to(textRef.current, {
         duration: 0.08,
         onComplete: () => {
           textRef.current.innerText = word;
-        }
+        },
       });
-      tl.to(textRef.current, {
-        duration: 0.08,
-      });
+      tl.to(textRef.current, { duration: 0.08 });
     });
 
-    tl.to({}, { duration: 0.3 });
+    return () => tl.kill();
+  }, []);
 
-    tl.to(containerRef.current, {
+  useEffect(() => {
+    if (!ready || !animationDone) return;
+
+    gsap.to(containerRef.current, {
       yPercent: -100,
-      duration: 0.5,
-      ease: "power1.inOut",
+      duration: 0.6,
+      ease: "power2.inOut",
       onComplete: () => setLoading(false),
     });
+  }, [ready, animationDone, setLoading]);
 
-  }, [setLoading]);
 
   return (
     <div

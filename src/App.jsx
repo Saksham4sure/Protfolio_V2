@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './App.css'
 
 import Preloader from './components/AnimationComponents/Preloader'
@@ -9,17 +9,30 @@ import Hero from './Sections/Hero'
 import Projects from './Sections/Projects'
 
 function App() {
-
   const [loading, setLoading] = useState(true);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      await document.fonts.ready;
+      await new Promise(res => setTimeout(res, 2000));
+      setReady(true);
+    }
+
+    prepare();
+  }, []);
 
   return (
     <>
       {loading && (
-        <Preloader setLoading={setLoading} />
+        <Preloader
+          ready={ready}
+          setLoading={setLoading}
+        />
       )}
 
       {!loading && (
-        <div className='overflow-x-hidden'>
+        <div className="overflow-x-hidden">
           <Navbar />
           <Hero />
           <About />
@@ -28,7 +41,7 @@ function App() {
         </div>
       )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

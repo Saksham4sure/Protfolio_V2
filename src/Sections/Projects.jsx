@@ -17,7 +17,7 @@ const Projects = () => {
 
   return (
     <>
-      <div ref={container} id='projects' className="">
+      <div ref={container} id='projects' className="relative">
         <div className="pt-28">
           <Titles title={titles[1].title} text={titles[1].text} />
         </div>
